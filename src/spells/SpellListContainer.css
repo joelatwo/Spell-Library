@@ -1,0 +1,17 @@
+.MuiFormLabel-root {
+  color: black;
+}
+
+#filterOptions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.MuiInputBase-root {
+  text-overflow: ellipsis;
+  width: 100px;
+}
+
+.Mui-checked {
+  color: black !important;
+}
