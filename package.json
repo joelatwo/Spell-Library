@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://atwo6777.github.io/",
+  "homepage": "https://atwo6777.github.io/Spell-Library/",
   "dependencies": {
     "@material-ui/core": "^4.3.2",
     "gh-pages": "^2.0.1",
