@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Spell-Library/static/css/main.82069043.chunk.css",
-    "main.js": "/Spell-Library/static/js/main.e93f4f8a.chunk.js",
-    "main.js.map": "/Spell-Library/static/js/main.e93f4f8a.chunk.js.map",
+    "main.css": "/Spell-Library/static/css/main.1878d504.chunk.css",
+    "main.js": "/Spell-Library/static/js/main.0592093e.chunk.js",
+    "main.js.map": "/Spell-Library/static/js/main.0592093e.chunk.js.map",
     "runtime~main.js": "/Spell-Library/static/js/runtime~main.4d60b97d.js",
     "runtime~main.js.map": "/Spell-Library/static/js/runtime~main.4d60b97d.js.map",
-    "static/js/2.716e9f47.chunk.js": "/Spell-Library/static/js/2.716e9f47.chunk.js",
-    "static/js/2.716e9f47.chunk.js.map": "/Spell-Library/static/js/2.716e9f47.chunk.js.map",
+    "static/js/2.02e291cd.chunk.js": "/Spell-Library/static/js/2.02e291cd.chunk.js",
+    "static/js/2.02e291cd.chunk.js.map": "/Spell-Library/static/js/2.02e291cd.chunk.js.map",
     "index.html": "/Spell-Library/index.html",
-    "precache-manifest.d9dab9bf168d474013ad59a945578819.js": "/Spell-Library/precache-manifest.d9dab9bf168d474013ad59a945578819.js",
+    "precache-manifest.44eaedb9d0b2bd882d1c483f1b9955b2.js": "/Spell-Library/precache-manifest.44eaedb9d0b2bd882d1c483f1b9955b2.js",
     "service-worker.js": "/Spell-Library/service-worker.js",
-    "static/css/main.82069043.chunk.css.map": "/Spell-Library/static/css/main.82069043.chunk.css.map"
+    "static/css/main.1878d504.chunk.css.map": "/Spell-Library/static/css/main.1878d504.chunk.css.map"
   }
 }
