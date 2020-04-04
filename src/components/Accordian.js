@@ -5,7 +5,7 @@ import "../components/accordian.css";
 export default function Accordian(props) {
   const [isActive, setIsActive] = useState(false);
   return (
-    <div>
+    <div className="spell">
       <button
         onClick={() => {
           setIsActive(!isActive);

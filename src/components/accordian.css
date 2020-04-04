@@ -14,7 +14,7 @@
 
 .activeAccordian,
 .accordian:hover {
-  background-color: aliceblue;
+  background-color: lightblue;
 }
 .accordian::after {
   content: "\02795"; /* Unicode character for "plus" sign (+) */

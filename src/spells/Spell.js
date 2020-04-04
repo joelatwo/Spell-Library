@@ -22,6 +22,24 @@ export default function Spell(props) {
             {props.spell.higherLevel}
           </div>
           <div>{props.spell.casterType}</div>
+          {props.addSpell ? (
+            <button
+              onClick={() => {
+                props.addSpell(props.spell);
+              }}
+            >
+              Add to SpellBook
+            </button>
+          ) : null}
+          {props.deleteSpell ? (
+            <button
+              onClick={() => {
+                props.deleteSpell(props.spell);
+              }}
+            >
+              Delete from SpellBook
+            </button>
+          ) : null}
         </div>
       }
     />

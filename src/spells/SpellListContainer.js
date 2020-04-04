@@ -26,7 +26,7 @@ export default function SpellListContainer() {
     "6th",
     "7th",
     "8th",
-    "9th"
+    "9th",
   ]);
   const [selectedLevels, setSelectedLevels] = useState([]);
 
@@ -38,7 +38,7 @@ export default function SpellListContainer() {
     "evocation",
     "illusion",
     "necromancy",
-    "transmutation"
+    "transmutation",
   ]);
   const [selectedSchools, setSelectedSchools] = useState([]);
 
@@ -51,9 +51,10 @@ export default function SpellListContainer() {
     "Sorcerer",
     "Warlock",
     "Wizard",
-    "Artificer"
+    "Artificer",
   ]);
   const [selectedClasses, setSelectedClasses] = useState([]);
+  const [spellBook, setSpellBook] = useState([]);
 
   useEffect(() => {
     filterSpells();
@@ -81,7 +82,7 @@ export default function SpellListContainer() {
       setFilteredSpellLibrary(spellLibrary);
     } else {
       setFilteredSpellLibrary(
-        _.filter(spellLibrary, spell => {
+        _.filter(spellLibrary, (spell) => {
           let isIncluded = true;
 
           if (selectedLevels.length > 0) {
@@ -137,6 +138,23 @@ export default function SpellListContainer() {
     }
   }
 
+  function addSpell(spell) {
+    let newSpellBook = _.cloneDeep(spellBook);
+    _.remove(newSpellBook, (currentSpell) => {
+      return spell.name === currentSpell.name;
+    });
+    newSpellBook.push(spell);
+    setSpellBook(newSpellBook);
+  }
+
+  function deleteSpell(spell) {
+    let newSpellBook = _.cloneDeep(spellBook);
+    _.remove(newSpellBook, (currentSpell) => {
+      return spell.name === currentSpell.name;
+    });
+    setSpellBook(newSpellBook);
+  }
+
   return (
     <div>
       <div>
@@ -145,7 +163,7 @@ export default function SpellListContainer() {
           <div>
             <InputLabel>Filter</InputLabel>
             <input
-              onChange={event => {
+              onChange={(event) => {
                 setFilterText(event.target.value);
               }}
               value={filterText}
@@ -173,9 +191,28 @@ export default function SpellListContainer() {
             setSelected={setSelectedClasses}
           />
         </div>
-        {_.map(filteredSpellLibrary, spell => (
-          <Spell key={spell.name} spell={spell} className="spell" />
-        ))}
+        <div className="spellContainer">
+          <div className="spellBook">
+            {_.map(spellBook, (spell) => (
+              <Spell
+                deleteSpell={deleteSpell}
+                key={spell.name}
+                spell={spell}
+                className="spell"
+              />
+            ))}
+          </div>
+          <div className="spellLibrary">
+            {_.map(filteredSpellLibrary, (spell) => (
+              <Spell
+                addSpell={addSpell}
+                key={spell.name}
+                spell={spell}
+                className="spell"
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
